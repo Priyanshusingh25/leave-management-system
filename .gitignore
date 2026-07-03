@@ -1,0 +1,46 @@
+# ===============================
+# Java / Spring Boot
+# ===============================
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+
+# ===============================
+# Angular
+# ===============================
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+
+# ===============================
+# IDE Files
+# ===============================
+.vscode/
+.idea/
+*.iml
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# ===============================
+# Logs
+# ===============================
+*.log
+
+# ===============================
+# Environment Files
+# ===============================
+.env
+.env.local
+
+# ===============================
+# Operating System
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# Build Files
+# ===============================
+*.class
