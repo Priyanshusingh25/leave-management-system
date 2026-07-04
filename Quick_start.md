@@ -19,12 +19,12 @@ Wait 60 seconds, then open: **http://localhost:4200**
 
 A complete **Employee Leave Management System** with:
 
-- ✅ **Full-stack application** (Angular + Spring Boot + PostgreSQL)
-- ✅ **8 working components** ready to use
-- ✅ **20+ REST APIs** documented with Swagger
-- ✅ **Demo accounts** pre-configured
-- ✅ **Docker setup** for instant deployment
-- ✅ **Database migrations** automatic
+-  **Full-stack application** (Angular + Spring Boot + PostgreSQL)
+-  **8 working components** ready to use
+-  **20+ REST APIs** documented with Swagger
+-  **Demo accounts** pre-configured
+-  **Docker setup** for instant deployment
+-  **Database migrations** automatic
 
 ---
 
@@ -175,36 +175,36 @@ docker-compose up --build
 
 ## What's Implemented
 
-✅ Authentication
+ Authentication
 - JWT-based login/logout
 - Password hashing (BCrypt)
 - Token refresh mechanism
 
-✅ Employee Features
+ Employee Features
 - Apply for leave (start/end dates, type, reason)
 - View leave history with filtering
 - Edit/cancel pending requests
 - Dashboard with statistics
 
-✅ Manager Features
+ Manager Features
 - View pending leave requests
 - Approve/reject with comments
 - View team leave history
 - Dashboard with team metrics
 
-✅ Backend
+ Backend
 - 20+ REST endpoints
 - Role-based access control
 - Input validation & error handling
 - Swagger API documentation
 
-✅ Database
+ Database
 - Normalized schema (3NF)
 - Automatic migrations with Flyway
 - Seed data with demo users
 - Strategic indexing
 
-✅ DevOps
+ DevOps
 - Docker containerization
 - Docker Compose orchestration
 - Multi-stage builds
