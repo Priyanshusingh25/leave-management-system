@@ -7,27 +7,27 @@ I built this full-stack leave management system with a Spring Boot backend and a
 ## Features
 
 ### Employee Features
-- ✅ Login and authentication with JWT
-- ✅ Apply for leave with date range and reason
-- ✅ View personal leave history
-- ✅ Edit or cancel pending leave requests
-- ✅ Employee dashboard with leave statistics
-- ✅ View profile details
+- Login and authentication with JWT
+- Apply for leave with date range and reason
+- View personal leave history
+- Edit or cancel pending leave requests
+- Employee dashboard with leave statistics
+- View profile details
 
 ### Manager Features
-- ✅ View pending leave requests from team members
-- ✅ Approve or reject leave requests
-- ✅ View team leave history and statistics
-- ✅ Manager dashboard with key metrics
-- ✅ Search and filter leave records
+- View pending leave requests from team members
+- Approve or reject leave requests
+- View team leave history and statistics
+- Manager dashboard with key metrics
+- Search and filter leave records
 
 ### System Features
-- ✅ Role-based access control for EMPLOYEE and MANAGER
-- ✅ JWT-based stateless authentication
-- ✅ REST API with Swagger/OpenAPI documentation
-- ✅ PostgreSQL database with Flyway migrations
-- ✅ Docker Compose orchestration for local deployment
-- ✅ Angular frontend served by Nginx in production
+- Role-based access control for EMPLOYEE and MANAGER
+- JWT-based stateless authentication
+- REST API with Swagger/OpenAPI documentation
+- PostgreSQL database with Flyway migrations
+- Docker Compose orchestration for local deployment
+- Angular frontend served by Nginx in production
 
 ---
 
