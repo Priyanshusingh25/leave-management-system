@@ -248,47 +248,29 @@ curl -X POST http://localhost:8080/api/employees/leaves/apply \
 
 ---
 
-## Scoring Checklist
-
-Points you're earning:
-
-| Component | Points | Status |
-|-----------|--------|--------|
-| Frontend Development | 20 | ✅ |
-| Backend Development | 25 | ✅ |
-| Database Design | 15 | ✅ |
-| API Documentation | 10 | ✅ |
-| README | 10 | ✅ |
-| Git Workflow | 10 | ✅ |
-| Project Structure | 5 | ✅ |
-| Bonus (Docker, JWT, RBAC) | 5 | ✅ |
-| **TOTAL** | **100** | **✅** |
-
----
-
 ## Common Tasks
 
-### I want to test the APIs
+### To test the APIs
 → Go to http://localhost:8080/swagger-ui.html
 
-### I want to see the database
+### To see the database
 → Connect to localhost:5432 (user: leaveflow_user, pass: leaveflow_pass)
 
-### I want to change the code
+### To change the code
 → Edit files, restart with `docker-compose up --build`
 
-### I want to see error logs
+### To see error logs
 → Run `docker-compose logs -f backend`
 
-### I want to stop the app
+### To stop the app
 → Press Ctrl+C or run `docker-compose down`
 
 ---
 
-## File Sizes (Just So You Know)
+## File Sizes 
 
-- **Backend**: 30 Java files, ~2000 lines
-- **Frontend**: 8 TypeScript components, ~1000 lines
+- **Backend**: 30+ Java files, ~2000+ lines
+- **Frontend**: 8+ TypeScript components, ~1000+ lines
 - **Database**: 2 Flyway migrations
 - **Config**: Docker + nginx + environment files
 - **Total**: 60+ files, 3000+ lines of code
@@ -316,7 +298,7 @@ Open `README.md` for:
 
 ---
 
-**Everything is ready. Just run it!**
+**Run it!**
 
 ```bash
 cd leaveflow
