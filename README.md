@@ -8,7 +8,7 @@ I built this full-stack leave management system with a Spring Boot backend and a
 
 ### Employee Features
 - Login and authentication with JWT
-- Apply for leave with date range and reason
+- Apply for leave --> date range and reason
 - View personal leave history
 - Edit or cancel pending leave requests
 - Employee dashboard with leave statistics
@@ -22,7 +22,7 @@ I built this full-stack leave management system with a Spring Boot backend and a
 - Search and filter leave records
 
 ### System Features
-- Role-based access control for EMPLOYEE and MANAGER
+- Role-based access control --> EMPLOYEE and MANAGER
 - JWT-based stateless authentication
 - REST API with Swagger/OpenAPI documentation
 - PostgreSQL database with Flyway migrations
@@ -65,12 +65,12 @@ leave-management-system/
 ## Installation & Setup
 
 ### Prerequisites
-- Docker & Docker Compose (recommended)
+- Docker & Docker Compose 
 - Node.js 20+ and npm
 - Java 17+ and Maven 3.9+ (for local backend run)
-- PostgreSQL 18+ (optional, when not using Docker)
+- PostgreSQL 18+ 
 
-### Option 1: Start with Docker Compose
+### Option 1: Docker Compose
 
 ```bash
 cd leave-management-system
@@ -82,7 +82,7 @@ Open after startup:
 - Backend API: http://localhost:8080
 - Swagger UI: http://localhost:8080/swagger-ui.html
 
-### Option 2: Run Backend Locally
+### Option 2: Running Backend Locally
 
 ```bash
 cd backend/backend
