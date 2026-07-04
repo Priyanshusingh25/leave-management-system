@@ -1,6 +1,6 @@
 # LeaveFlow Database Schema Reference
 
-This file is the dedicated database schema reference for the LeaveFlow PostgreSQL implementation. I keep the schema here so the main README can stay focused on setup, architecture, and deployment.
+Dedicated database schema reference for the LeaveFlow PostgreSQL implementation. I keep the schema here so the main README can stay focused on setup, architecture, and deployment.
 
 ## Overview
 PostgreSQL 18+ relational database schema for employee leave management system.
