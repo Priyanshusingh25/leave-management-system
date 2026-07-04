@@ -1,0 +1,21 @@
+INSERT INTO employees
+(name,email,password_hash,department,role)
+VALUES
+(
+'Manager',
+'manager@leaveflow.com',
+'$2a$10$95q4Fxfv8hzpUZWpTsI2uu9V8AMCWPd9xe7/dOTKFp9IdTApRzSfK',
+'Engineering',
+'MANAGER'
+);
+
+INSERT INTO employees
+(name,email,password_hash,department,role)
+VALUES
+(
+'Employee',
+'employee@leaveflow.com',
+'$2a$10$95q4Fxfv8hzpUZWpTsI2uu9V8AMCWPd9xe7/dOTKFp9IdTApRzSfK',
+'Engineering',
+'EMPLOYEE'
+);

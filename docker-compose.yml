@@ -1,0 +1,67 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: leaveflow-db
+    environment:
+      POSTGRES_DB: leave_management
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ROOT
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - leaveflow-network
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U leaveflow_user -d leaveflow" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Spring Boot Backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: leaveflow-backend
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: leave_management
+      DB_USERNAME: postgres
+      DB_PASSWORD: ROOT
+      JWT_SECRET: c2VjdXJlLWxlYXZlZmxvdy1kZW1vLXNlY3JldC1rZXktY2hhbmdlLWluLXByb2R1Y3Rpb24tMjU2Yml0
+      CORS_ALLOWED_ORIGINS: http://localhost:4200,http://localhost:3000
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - leaveflow-network
+
+  # Angular Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: leaveflow-frontend
+    ports:
+      - "4200:80"
+    environment:
+      API_URL: http://localhost:8080
+    depends_on:
+      - backend
+    networks:
+      - leaveflow-network
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  leaveflow-network:
+    driver: bridge

@@ -1,5 +1,0 @@
-package com.leaveflow.backend.config;
-
-public class SecurityConfig {
-
-}

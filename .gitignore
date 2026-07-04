@@ -1,46 +1,58 @@
-# ===============================
-# Java / Spring Boot
-# ===============================
-backend/target/
-backend/.mvn/wrapper/maven-wrapper.jar
-
-# ===============================
-# Angular
-# ===============================
-frontend/node_modules/
-frontend/dist/
-frontend/.angular/
-
-# ===============================
-# IDE Files
-# ===============================
-.vscode/
-.idea/
-*.iml
-
+# IDE
 # Eclipse
 .project
 .classpath
 .settings/
+.idea/
+.metadata/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
 
-# ===============================
-# Logs
-# ===============================
-*.log
+# Backend - Java/Maven
+backend/target/
+backend/.mvn/
+backend/*.jar
+backend/*.war
+backend/dependency-reduced-pom.xml
 
-# ===============================
-# Environment Files
-# ===============================
+# Backend - Spring
+backend/.classpath
+backend/.c9/
+backend/*.launch
+backend/.settings/
+backend/*.sublime-workspace
+
+# Frontend - Node
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+frontend/.parcel-cache/
+frontend/.env.local
+frontend/.env.*.local
+frontend/npm-debug.log
+frontend/yarn-error.log
+
+# Environment
 .env
 .env.local
+.env.*.local
 
-# ===============================
-# Operating System
-# ===============================
+# Database
+*.db
+*.sqlite3
+
+# OS
 .DS_Store
 Thumbs.db
 
-# ===============================
-# Build Files
-# ===============================
-*.class
+# Build
+build/
+out/
+*.o
+*.so
+
+# Logs
+*.log
