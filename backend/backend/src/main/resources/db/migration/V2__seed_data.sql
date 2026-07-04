@@ -1,7 +1,5 @@
--- ==========================================================
 -- LeaveFlow: Seed data
 -- All demo accounts use password: Password@123
--- ==========================================================
 
 -- Manager (no manager_id, self-referential root)
 INSERT INTO employees (name, email, password_hash, department, role, manager_id)

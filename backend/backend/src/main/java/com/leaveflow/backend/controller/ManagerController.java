@@ -1,23 +1,30 @@
 package com.leaveflow.backend.controller;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.leaveflow.backend.dto.LeaveResponse;
 import com.leaveflow.backend.dto.ManagerDashboardResponse;
 import com.leaveflow.backend.dto.PageResponse;
 import com.leaveflow.backend.dto.ReviewLeaveRequest;
 import com.leaveflow.backend.service.ManagerService;
+
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/manager")
@@ -94,25 +101,14 @@ public class ManagerController {
     }
 
     private Long extractUserIdFromAuthentication(Authentication authentication) {
-        // For now, we'll use email and fetch from repo to get ID
-        // In a production app, you'd store userId in JWT claims directly
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
         
-        // Placeholder: we need to fetch employee by email to get ID
-        // This should be from a security context utility
-        // For this assignment, we can use a custom claim if available
         String email = userDetails.getUsername();
-        
-        // Since we can't easily get ID from UserDetails, this is a limitation
-        // We'll need to rely on claims in the JWT token
-        // For now, return a dummy value or enhance UserPrincipal
-        
-        // Better approach: check if Principal has the ID info
+
         if (userDetails instanceof com.leaveflow.backend.security.user.UserPrincipal) {
             return ((com.leaveflow.backend.security.user.UserPrincipal) userDetails).getId();
         }
         
-        // Fallback: shouldn't reach here in normal flow
         throw new IllegalStateException("Unable to extract userId from authentication");
     }
 }

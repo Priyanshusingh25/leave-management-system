@@ -1,6 +1,5 @@
--- ==========================================================
+
 -- LeaveFlow: Initial schema
--- ==========================================================
 
 CREATE TABLE employees (
     id              BIGSERIAL PRIMARY KEY,
@@ -29,7 +28,6 @@ CREATE TABLE leaves (
     CONSTRAINT chk_leave_dates CHECK (end_date >= start_date)
 );
 
--- Indexes for common query patterns
 CREATE INDEX idx_employees_email       ON employees(email);
 CREATE INDEX idx_employees_manager_id  ON employees(manager_id);
 CREATE INDEX idx_leaves_employee_id    ON leaves(employee_id);

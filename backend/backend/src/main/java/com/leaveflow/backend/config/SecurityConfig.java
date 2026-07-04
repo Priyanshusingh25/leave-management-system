@@ -1,6 +1,7 @@
 package com.leaveflow.backend.config;
 
-import lombok.RequiredArgsConstructor;
+import java.util.List;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -22,7 +23,7 @@ import com.leaveflow.backend.security.JwtAuthEntryPoint;
 import com.leaveflow.backend.security.JwtAuthFilter;
 import com.leaveflow.backend.security.user.UserDetailsServiceImpl;
 
-import java.util.List;
+import lombok.RequiredArgsConstructor;
 
 @Configuration
 @EnableWebSecurity
@@ -32,7 +33,6 @@ public class SecurityConfig {
    private final JwtAuthFilter jwtAuthFilter;
    private final JwtAuthEntryPoint jwtAuthEntryPoint;
    private final UserDetailsServiceImpl userDetailsService;
-//   private final com.leaveflow.backend.security.UserDetailsServiceImpl userDetailsService;
 
    @org.springframework.beans.factory.annotation.Value("${app.cors.allowed-origins}")
    private String allowedOrigins;
