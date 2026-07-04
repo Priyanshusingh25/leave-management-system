@@ -1,0 +1,22 @@
+<div class="dashboard-container">
+    <h1>Manager Dashboard</h1>
+    <div class="stats-grid" *ngIf="dashboard">
+        <div class="stat-card">
+            <div class="stat-label">Total Employees</div>
+            <div class="stat-value">{{ dashboard.totalEmployees }}</div>
+        </div>
+        <div class="stat-card pending">
+            <div class="stat-label">Pending Approvals</div>
+            <div class="stat-value">{{ dashboard.pendingApprovals }}</div>
+        </div>
+        <div class="stat-card approved">
+            <div class="stat-label">Approved</div>
+            <div class="stat-value">{{ dashboard.approvedRequests }}</div>
+        </div>
+        <div class="stat-card rejected">
+            <div class="stat-label">Rejected</div>
+            <div class="stat-value">{{ dashboard.rejectedRequests }}</div>
+        </div>
+    </div>
+    <div *ngIf="!dashboard" class="loading">Loading...</div>
+</div>

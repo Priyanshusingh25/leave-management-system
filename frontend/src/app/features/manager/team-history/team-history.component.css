@@ -1,0 +1,59 @@
+ .container {
+     max-width: 1200px;
+     margin: 0 auto;
+ }
+
+ h1 {
+     color: #1976d2;
+     margin-bottom: 2rem;
+ }
+
+ .card {
+     background: white;
+     padding: 1.5rem;
+     border-radius: 8px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
+ table {
+     width: 100%;
+     border-collapse: collapse;
+ }
+
+ th,
+ td {
+     padding: 1rem;
+     text-align: left;
+     border-bottom: 1px solid #ddd;
+ }
+
+ th {
+     background-color: #f5f5f5;
+     font-weight: 600;
+ }
+
+ .badge {
+     padding: 0.25rem 0.75rem;
+     border-radius: 12px;
+     font-size: 0.875rem;
+ }
+
+ .badge.pending {
+     background-color: #fff3cd;
+     color: #856404;
+ }
+
+ .badge.approved {
+     background-color: #d4edda;
+     color: #155724;
+ }
+
+ .badge.rejected {
+     background-color: #f8d7da;
+     color: #721c24;
+ }
+
+ .loading {
+     text-align: center;
+     padding: 2rem;
+ }

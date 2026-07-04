@@ -1,0 +1,50 @@
+ .dashboard-container {
+     max-width: 1200px;
+     margin: 0 auto;
+ }
+
+ h1 {
+     margin-bottom: 2rem;
+     color: #1976d2;
+ }
+
+ .stats-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     gap: 1.5rem;
+ }
+
+ .stat-card {
+     background: linear-gradient(135deg, #667eea, #764ba2);
+     color: white;
+     padding: 1.5rem;
+     border-radius: 8px;
+ }
+
+ .stat-card.approved {
+     background: linear-gradient(135deg, #4facfe, #00f2fe);
+ }
+
+ .stat-card.pending {
+     background: linear-gradient(135deg, #f093fb, #f5576c);
+ }
+
+ .stat-card.rejected {
+     background: linear-gradient(135deg, #fa709a, #fee140);
+ }
+
+ .stat-label {
+     font-size: 0.875rem;
+     opacity: 0.9;
+ }
+
+ .stat-value {
+     font-size: 2rem;
+     font-weight: bold;
+     margin-top: 0.5rem;
+ }
+
+ .loading {
+     text-align: center;
+     padding: 2rem;
+ }

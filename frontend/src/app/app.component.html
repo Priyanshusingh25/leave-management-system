@@ -1,0 +1,12 @@
+<div class="app-container">
+      <nav class="navbar" *ngIf="authService.isAuthenticated$ | async">
+        <div class="nav-brand">LeaveFlow</div>
+        <div class="nav-links">
+          <span class="user-info">{{ (authService.user$ | async)?.name }}</span>
+          <button (click)="logout()" class="logout-btn">Logout</button>
+        </div>
+      </nav>
+      <main class="main-content">
+        <router-outlet></router-outlet>
+      </main>
+    </div>

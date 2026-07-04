@@ -1,0 +1,32 @@
+<div class="container">
+    <h1>Apply for Leave</h1>
+    <div class="card">
+        <form [formGroup]="leaveForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Leave Type:</label>
+                <select formControlName="leaveType">
+                    <option value="">Select leave type</option>
+                    <option value="SICK">Sick Leave</option>
+                    <option value="CASUAL">Casual Leave</option>
+                    <option value="ANNUAL">Annual Leave</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Start Date:</label>
+                <input type="date" formControlName="startDate" />
+            </div>
+            <div class="form-group">
+                <label>End Date:</label>
+                <input type="date" formControlName="endDate" />
+            </div>
+            <div class="form-group">
+                <label>Reason:</label>
+                <textarea formControlName="reason"></textarea>
+            </div>
+            <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+            <button type="submit" [disabled]="leaveForm.invalid || isLoading" class="button primary">
+                {{ isLoading ? 'Submitting...' : 'Apply Leave' }}
+            </button>
+        </form>
+    </div>
+</div>
